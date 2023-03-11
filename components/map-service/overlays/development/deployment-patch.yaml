@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: map-service
+  namespace: user1-tenant
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - image: quay.io/jduimovich0/dc-metro-map@sha256:7d95784eff2a0ac09541a4c5d2297950da8d0eb88d7d752aedf64a8b1703b5a3
+        name: container-image
+        resources: {}
+status: {}
